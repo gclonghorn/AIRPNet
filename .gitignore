@@ -1,0 +1,5 @@
+# .gitignore file
+Single/__pycache__
+Single/experiments
+Single/pretrained
+Single/tb_logger
