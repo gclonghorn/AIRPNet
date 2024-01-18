@@ -31,13 +31,6 @@ class AttentionBlock(nn.Module):
         self.lrelu = nn.LeakyReLU(inplace=True)
         self.senet = SELayer(channel=input + 2 * 32)
         initialize_weights([self.conv3], 0.)
-        for m in self.modules():
-        # 如果是卷积层
-            if isinstance(m, nn.Conv2d):
-                # 初始化权重为0
-                torch.nn.init.zeros_(m.weight)
-                # 设置不需要梯度
-                m.weight.requires_grad_(False)
 
     def forward(self, x):
         x1 = self.lrelu(self.conv1(x))
