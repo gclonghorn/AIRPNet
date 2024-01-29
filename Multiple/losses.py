@@ -44,11 +44,10 @@ class LSR_Loss(nn.Module):
         lossc2 = self.mse(cover_img,steg_clean2)
         losss1 = self.mse(secret_img1,rec_img1)
         losss2 = self.mse(secret_img2,rec_img2)
-        percep_losss1 = self.vgg_loss(secret_img1,rec_img1)
-        percep_losss2 = self.vgg_loss(secret_img2,rec_img2)
-        loss = cweight2*lossc2+ sweight1*losss1 + sweight2*losss2 + pweight_c*percep_losss1 +pweight_c*percep_losss2 
+        percep_loss = self.vgg_loss(cover_img,steg_clean2)
+        loss = cweight2*lossc2+ sweight1*losss1 + sweight2*losss2 + pweight_c*percep_loss
         out['pixel_loss'] = cweight2*lossc2+ sweight1*losss1+sweight2*losss2
-        out['percep_loss'] = pweight_c*percep_losss1 +pweight_c*percep_losss2
+        out['percep_loss'] = pweight_c*percep_loss
         out['loss'] = loss
         return out
 
