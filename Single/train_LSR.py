@@ -586,7 +586,7 @@ def parse_args(argv):
         "--dec", default = [2,2,2], nargs='+', type=int, help="dec_blk_num in SRM"
     ),
     parser.add_argument(
-        "--save_img", action="store_true", default=False, help="Save model to disk"
+        "--save_img", action="store_true", default=False, help="Save images to disk"
     )
     parser.add_argument(
         "--sp1", type=int,  default=2, help='num of noisy samples for training in one batch'
@@ -616,7 +616,7 @@ def parse_args(argv):
         "--pweight_c", type=float,  default=0.01,help="weight of perceptual loss"
     ),
     parser.add_argument(
-        "--lfrestore", action="store_true", default=True, help="Save model to disk"
+        "--lfrestore", action="store_true", default=True, help="Whether to use LPM"
     ),
     parser.add_argument(
         "--steps", type=int,  default=4, help="num of wlblocks in each scale of LSR"
