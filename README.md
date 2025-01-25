@@ -11,7 +11,7 @@ This project was developed and tested with the following environment:
 ## Checkpoints
 
 You can access the checkpoints for AIRPNet at the following URL:
-- Checkpoint: [Link to Checkpoint](https://drive.google.com/drive/folders/1mbcB_SVK3beaxeRQYXtkHuwEQ4IT_OMX?usp=sharing)
+- Checkpoint: [Link to Checkpoint](https://drive.google.com/drive/folders/1LXiQBXPE_Gf833WSziiZWjJszaqDqLsd?usp=drive_link)
 
 ## Datasets
 
